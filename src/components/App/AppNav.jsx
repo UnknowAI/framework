@@ -20,6 +20,14 @@ const styles ={
     marginLeft: -12,
     marginRight: 20,
   },
+  btnRoot: {
+    height: 67,
+    borderRadius: 0,
+    color: "white"
+  },
+  AppBarRoot: {
+    backgroundColor: "rgba(0,0,0,0)"
+  }
 };
 
 class AppNav extends Component {
@@ -27,17 +35,20 @@ class AppNav extends Component {
     const {classes, onMenuClick} = this.props;
 
     return (
-      <div>
-        <AppBar position="static">
+      <div className={classes}>
+        <AppBar position="static" classes={{root: classes.AppBarRoot}}>
           <Toolbar>
+
             <IconButton className={classes.menuButton} color="contrast" aria-label="Menu" onClick={onMenuClick}>
               <MenuIcon />
             </IconButton>
             <Typography type="title" color="inherit" className={classes.grow}>
               Grey Dev
             </Typography>
-            <Button color="contrast" component={Link} to="/" disableRipple>Home</Button>
-            <Button color="contrast" component={Link} to="/about" disableRipple>About</Button>
+            
+            <Button component={Link} to="/" classes={{root: classes.btnRoot}}>Home</Button>
+            <Button component={Link} to="/about" classes={{root: classes.btnRoot}}>About</Button>
+
           </Toolbar>
         </AppBar>
       </div>

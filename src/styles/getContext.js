@@ -16,7 +16,7 @@ export function getTheme(paletteType) {
   return theme;
 }
 
-const theme = getTheme('light');
+const theme = getTheme('dark');
 
 // Configure JSS
 const jss = create(preset());

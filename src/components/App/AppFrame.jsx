@@ -4,11 +4,12 @@ import { withStyles }       from 'material-ui/styles';
 
 import AppDrawer            from './AppDrawer';
 import AppNav               from './AppNav';
+import JumboTron            from '../Jumbotron/Jumbotron';
 
 const styles = theme => ({
   '@global': {
     html: {
-    
+      backgroundColor: "#000"
     },
     body: {
       margin: 0,
@@ -25,7 +26,13 @@ const styles = theme => ({
   },
   grow: {
     flex: '1 1 auto'
-  }
+  },
+  up: {
+    marginTop: "-67px",
+  },
+  root: {
+    backgroundColor: "rgba(0,0,0,0.5)"
+  }  
 });
 
 class AppFrame extends Component {
@@ -43,14 +50,17 @@ class AppFrame extends Component {
 
   render() {
     const {classes, children} = this.props;
-
     return (
       <div className={classes.appFrame}>
 
-        <AppNav onMenuClick={this.handleDrawerToggle}/>
+        <AppNav onMenuClick={this.handleDrawerToggle} className={root}/>
         <AppDrawer open={this.state.drawerOpen} onRequestClose={this.handleDrawerClose}/>
 
-        {children}
+        <div className={classes.up}>
+          <JumboTron/>
+
+          {children}
+        </div>
         
       </div>
     );

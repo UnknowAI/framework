@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
+import { withStyles } from 'material-ui/styles';
+
+const styles = {
+  
+}
 
 class Home extends Component {
   render() {
+    // const {classes} = this.props;
+
     return (
       <div>
         Home
@@ -10,4 +17,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default withStyles(styles)(Home);
