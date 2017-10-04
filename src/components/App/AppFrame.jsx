@@ -1,19 +1,9 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 
-import {
-  AppBar,
-  Toolbar,
-  IconButton,
-  Typography,
-  Button
-} from 'material-ui';
+import { withStyles }       from 'material-ui/styles';
 
-import { Menu as MenuIcon } from 'material-ui-icons';
-import { withStyles } from 'material-ui/styles';
-
-import AppDrawer from './AppDrawer';
-import AppNav from './AppNav';
+import AppDrawer            from './AppDrawer';
+import AppNav               from './AppNav';
 
 const styles = theme => ({
   '@global': {

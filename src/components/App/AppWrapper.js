@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
-import { connect } from 'react-redux';
+// import { withRouter } from 'react-router-dom';
+// import { connect } from 'react-redux';
 import { MuiThemeProvider } from 'material-ui/styles';
-import getContext, { getTheme } from '../../styles/getContext';
+import getContext /*, { getTheme } */ from '../../styles/getContext';
 
 class AppWrapper extends Component {
   componentWillMount() {

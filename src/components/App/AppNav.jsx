@@ -12,8 +12,6 @@ import {
 import { Menu as MenuIcon } from 'material-ui-icons';
 import { withStyles } from 'material-ui/styles';
 
-import AppDrawer from './AppDrawer';
-
 const styles ={
   grow: {
     flex: '1 1 auto'
@@ -36,7 +34,7 @@ class AppNav extends Component {
               <MenuIcon />
             </IconButton>
             <Typography type="title" color="inherit" className={classes.grow}>
-              Title
+              Grey Dev
             </Typography>
             <Button color="contrast" component={Link} to="/" disableRipple>Home</Button>
             <Button color="contrast" component={Link} to="/about" disableRipple>About</Button>

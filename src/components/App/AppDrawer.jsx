@@ -3,19 +3,11 @@ import PropTypes from 'prop-types';
 
 import {
   List,
-  ListSubheader,
   Toolbar,
   Drawer,
   Divider,
   Typography
 } from 'material-ui';
-
-import {
-  Movie as MovieIcon,
-  Tv as ShowIcon,
-  Settings as SettingsIcon,
-  OndemandVideo as VideoIcon
-} from 'material-ui-icons';
 
 import { withStyles } from 'material-ui/styles';
 import AppDrawerNavItem from './AppDrawerNavItem';
@@ -47,7 +39,7 @@ function AppDrawer(props) {
       <div className={classes.nav}>
         <Toolbar className={classes.toolbar}>
           <Typography type="title" color="inherit">
-            Title
+            Grey Dev
           </Typography>
           <Divider absolute />
         </Toolbar>
