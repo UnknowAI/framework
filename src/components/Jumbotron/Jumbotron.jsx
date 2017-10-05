@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter }       from 'react-router';
 
 import { withStyles }       from 'material-ui/styles';
 
@@ -10,11 +11,17 @@ const styles = {
   },
   img: {
     width: "100vw",
+    marginTop: "-25%"
   }
 }
 
 class Jumbotron extends Component {
-  shouldComponentUpdate() {
+  shouldComponentUpdate(nextProps) {
+    const {location} = this.props;
+
+    if(location.pathname !== nextProps.location.pathname)
+      return true;
+
     return false;
   }
 
@@ -39,4 +46,4 @@ class Jumbotron extends Component {
   }
 }
 
-export default withStyles(styles)(Jumbotron);
+export default withRouter(withStyles(styles)(Jumbotron));
